@@ -41,7 +41,7 @@
 
 [Я хочу здесь работать](https://career.ru/vacancy/19329610)
 
-### [<img src="logo/isys.png"> i-Sys.ru](http://www.i-sys.ru/)
+### [<img src="logo/isys.png"> i-Sys.ru](http://www.i-sys.ru/) ✅
 
 Аутсорс. Офис в Самаре, Тольятти и Оренбурге.
 
