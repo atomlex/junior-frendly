@@ -2,7 +2,7 @@
   "name": "junior-friendly",
   "version": "0.0.1",
   "description": "Site for junior developers",
-  "main": "components.js",
+  "main": "junior-frendly/index.tml",
   "scripts": {
     "test": "start"
   },
