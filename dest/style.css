@@ -1,0 +1,146 @@
+h1 {
+  margin: 0;
+}
+
+/* Header */
+header {
+  z-index: 1;
+  padding: 16px 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f2f2f2;
+  box-shadow: 1px 1px 5px 0px #999;
+}
+
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.logo {
+  font-size: 32px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: currentColor;
+  padding: 1px 8px;
+  padding: 0.1rem 0.5rem;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+          transition: 0.3s
+}
+
+.logo:hover {
+  color: #b81d11;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-nav {
+  float: right;
+  margin-top: 16px;
+  margin-top: 1rem;
+}
+
+.main-nav a {
+  margin: 16px;
+  margin: 1rem;
+  color: currentColor;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s
+}
+
+.main-nav a:last-child {
+  margin-right: 0;
+}
+
+.main-nav a:hover {
+  border-bottom-color: #b81d11;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+/* End */
+
+/* Hero image */
+.hero-img {
+  height: 90vh;
+  min-height: 450px;
+  box-sizing: border-box;
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  background-size: 5px 5px;
+  text-align: center;
+}
+.hero-img .wrapper {
+  padding: 20vh 20vw;
+}
+.hero-img h1 {
+  font-size: 5vw
+}
+.hero-img h1:after {
+  content: "";
+  display: block;
+  width: 10vw;
+  height: 1vh;
+  background: #b81d11;
+  margin: 1.5vh auto 3vh;
+}
+.hero-img p {
+  font-size: 2vw;
+}
+/* End */
+
+/* Scroll icon */
+.icon-scroll, .icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+.icon-scroll {
+  width: 25px;
+  height: 40px;
+  margin-left: -12px;
+  bottom: 5vh;
+  margin-top: -20px;
+  box-shadow: inset 0 0 0 1px #333;
+  border-radius: 25px;
+}
+.icon-scroll:before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: #333;
+  margin-left: -2px;
+  top: 5px;
+  border-radius: 4px;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(26px);
+            transform: translateY(26px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(26px);
+            transform: translateY(26px);
+  }
+}
+/* End */

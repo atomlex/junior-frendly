@@ -19,14 +19,14 @@
 <body>
   <header>
     <div class="wrapper">
-      <a href="" class="logo"></a>
-      <nav ng-controller="MenyController">
+      <a href="/" class="logo"><code>Junior Friendly</code></a>
+      <nav ng-controller="MenyController" class="main-nav">
         <a ng-repeat="menu in menuLinks" ng-href={{menu.link}}>{{menu.lable}}</a>
       </nav>
     </div>
   </header>
   <main>
-    <div ng-view></div>
+    <ng-view></ng-view>
   </main>
 
   <script src="components.js"></script>
