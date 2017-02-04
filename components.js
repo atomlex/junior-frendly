@@ -3,22 +3,22 @@ var juniorFriendlyApp = angular.module('juniorFriendlyApp', ['ngSanitize', 'ngRo
 juniorFriendlyApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
 
-        .when('/about', {
+        .when('junior-frendly/about', {
             templateUrl : 'parts/about.html',
         })
 
-        .when('/work', {
+        .when('junior-frendly/work', {
             templateUrl : 'parts/work-list.html',
             controller  : 'CompanyListController'
         })
 
-        .when('/traineeship', {
+        .when('junior-frendly/traineeship', {
             templateUrl : 'parts/traineeship-list.html',
             controller  : 'CompanyListController'
         })
 
         .otherwise({
-          redirectTo: '/',
+          redirectTo: 'junior-frendly/',
           templateUrl: 'parts/main.html'
         });
 
@@ -29,19 +29,19 @@ juniorFriendlyApp.config(function($routeProvider, $locationProvider) {
 juniorFriendlyApp.controller('MenyController', function MenyController($scope) {
   $scope.menuLinks = [
     {
-      link: '/',
+      link: 'junior-frendly/',
       lable: 'Главная'
     },
     {
-      link: 'work',
+      link: 'junior-frendly/work',
       lable: 'Работа'
     },
     {
-      link: 'traineeship',
+      link: 'junior-frendly/traineeship',
       lable: 'Стажировка'
     },
     {
-      link: 'about',
+      link: 'junior-frendly/about',
       lable: 'О проекте'
     }
   ]
