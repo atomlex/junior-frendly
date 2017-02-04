@@ -4,22 +4,22 @@ juniorFriendlyApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
 
         .when('/about', {
-            templateUrl : '/parts/about.html',
+            templateUrl : 'parts/about.html',
         })
 
         .when('/work', {
-            templateUrl : '/parts/work-list.html',
+            templateUrl : 'parts/work-list.html',
             controller  : 'CompanyListController'
         })
 
         .when('/traineeship', {
-            templateUrl : '/parts/traineeship-list.html',
+            templateUrl : 'parts/traineeship-list.html',
             controller  : 'CompanyListController'
         })
 
         .otherwise({
           redirectTo: '/',
-          templateUrl: '/parts/main.html'
+          templateUrl: 'parts/main.html'
         });
 
         $locationProvider.html5Mode(true);
