@@ -20,7 +20,7 @@ juniorFriendlyApp.config(function($routeProvider, $locationProvider) {
         .otherwise({
           redirectTo: '/',
           templateUrl: 'parts/main.html'
-        });
+        })
 
         $locationProvider.html5Mode(true);
 });
@@ -29,19 +29,19 @@ juniorFriendlyApp.config(function($routeProvider, $locationProvider) {
 juniorFriendlyApp.controller('MenyController', function MenyController($scope) {
   $scope.menuLinks = [
     {
-      link: '/',
+      link: './',
       lable: 'Главная'
     },
     {
-      link: '/work',
+      link: 'work',
       lable: 'Работа'
     },
     {
-      link: '/traineeship',
+      link: 'traineeship',
       lable: 'Стажировка'
     },
     {
-      link: '/about',
+      link: 'about',
       lable: 'О проекте'
     }
   ]
