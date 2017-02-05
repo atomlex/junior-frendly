@@ -1,4 +1,4 @@
-<section class="company-list" ng-controller="CompanyListController">
+<section class="company-list">
   <h2>Список компаний</h2>
   <p>В этом списке собраны компании, которые с радостью примут на работу начинающего разработчика.</p>
   <div class="company-list-item" ng-repeat="company in companies | filter:{work:false} | limitTo:totalDisplayed">

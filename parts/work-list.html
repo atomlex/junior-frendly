@@ -1,23 +1,29 @@
-<section class="company-list" ng-controller="CompanyListController">
-  <h2>Список компаний</h2>
-  <p>В этом списке собраны компании, которые с радостью примут на работу начинающего разработчика.</p>
-  <div class="company-list-item" ng-repeat="company in companies | filter:{work:true} | limitTo:totalDisplayed">
-    <a ng-href={{company.companyLink}}><h3 class="company-name approved"><img ng-src={{company.logo}} alt="" class="company-logo">{{company.name}}</h3></a>
-    <h4 class="vacancy-name">{{company.vacancyName}}</h4>
-    <ol class="vacancy-requirement">
-      <li ng-repeat="requirement in company.requirements">{{requirement}}</li>
-    </ol>
-    <p class="vacancy-description">{{company.description}}</p>
-    <div class="company-location">
-      <span ng-repeat="location in company.location">{{location}}</span>
+<section class="company-list">
+  <div class="wrapper">
+    <form action="">
+      <input type="search" name="" value="" placeholder="Поиск" ng-model="compSearch">
+    </form>
+
+    <h2 class="strip">Список компаний</h2>
+    <p>В этом списке собраны компании, которые с радостью примут на работу начинающего разработчика.</p>
+    <div class="company-list-item" ng-repeat="company in companies | filter:{work:true} | limitTo:totalDisplayed | filter: compSearch">
+      <a ng-href={{company.companyLink}}><h3 class="company-name approved"><img ng-src={{company.logo}} alt="" class="company-logo">{{company.name}}</h3></a>
+      <h4 class="vacancy-name">{{company.vacancyName}}</h4>
+      <ol class="vacancy-requirement">
+        <li ng-repeat="requirement in company.requirements">{{requirement}}</li>
+      </ol>
+      <p class="vacancy-description">{{company.description}}</p>
+      <div class="company-location">
+        <span ng-repeat="location in company.location">{{location}}</span>
+      </div>
+      <address class="vacancy-contacts">
+        <ul class="vacancy-contacts-list">
+          <li ng-repeat="contact in company.contacts" class="vacancy-contacts-list-item">
+            <a ng-href={{contact}}>{{contact}}</a>
+          </li>
+        </ul>
+      </address>
     </div>
-    <address class="vacancy-contacts">
-      <ul class="vacancy-contacts-list">
-        <li ng-repeat="contact in company.contacts" class="vacancy-contacts-list-item">
-          <a ng-href={{contact}}>{{contact}}</a>
-        </li>
-      </ul>
-    </address>
+    <button id="load" ng-hide="companies.length < totalDisplayed" ng-click="loadMore()">Показать еще</button>
   </div>
-  <button id="load" ng-hide="companies.length < totalDisplayed" ng-click="loadMore()">Показать еще</button>
 </section>
