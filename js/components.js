@@ -50,7 +50,7 @@ app.controller('CompanyListController', ['$scope', '$http', '$location', functio
     {
       name: 'Тинькофф банк',
       companyLink: 'https://www.tinkoff.ru/',
-      logo:'logo/t.jpg',
+      logo:'logo/tinkoff.ico',
       vacancyName:'Верстальщик',
       requirements: ['Soft-skills', 'Хорошее знание теории', 'Огонь в глазах'],
       description: 'Полный рабочий день.',
@@ -196,6 +196,6 @@ app.controller('CompanyListController', ['$scope', '$http', '$location', functio
   $scope.totalDisplayed = 5;
 
 	$scope.loadMore = function () {
-		$scope.totalDisplayed += 4;
+		return $scope.totalDisplayed += 4;
 	};
 }]);
