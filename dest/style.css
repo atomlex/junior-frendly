@@ -1,5 +1,10 @@
+body {
+  font-family: 'Open Sans',sans-serif;
+}
+
 h1 {
   margin: 0;
+  font-family: 'Roboto',sans-serif;
 }
 
 /* Header */
@@ -12,7 +17,7 @@ header {
 }
 
 .wrapper {
-  max-width: 980px;
+  max-width: 90%;
   margin: 0 auto;
   color: #333;
 }
@@ -77,18 +82,52 @@ header {
   padding: 20vh 20vw;
 }
 .hero-img h1 {
-  font-size: 5vw
-}
-.hero-img h1:after {
-  content: "";
-  display: block;
-  width: 10vw;
-  height: 1vh;
-  background: #b81d11;
-  margin: 1.5vh auto 3vh;
+  font-size: 5vw;
 }
 .hero-img p {
   font-size: 2vw;
+}
+
+.strip {
+  text-align: center;
+  font-size: 3vw
+}
+
+.strip:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1vh;
+  background: #b81d11;
+  margin: 1.5vh auto 3vh;
+  -webkit-animation: 1s 1s linear strip-grow;
+  animation: 1s 1s linear strip-grow;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes strip-grow {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 5vw;
+  }
+  100% {
+    width: 10vw;
+  }
+}
+
+@keyframes strip-grow {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 5vw;
+  }
+  100% {
+    width: 10vw;
+  }
 }
 /* End */
 
@@ -103,7 +142,7 @@ header {
   margin-left: -12px;
   bottom: 5vh;
   margin-top: -20px;
-  box-shadow: inset 0 0 0 1px #333;
+  box-shadow: inset 0 0 0 1px #999;
   border-radius: 25px;
 }
 .icon-scroll:before {
@@ -143,4 +182,105 @@ header {
             transform: translateY(26px);
   }
 }
+/* End */
+
+/* Search input */
+
+/* End */
+
+/* Work-list & traineeship-list */
+.description {
+  text-align: center;
+}
+
+.company-list {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: justify;
+      -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-align: baseline;
+      -webkit-box-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 5vw auto
+}
+
+.company-list * {
+  margin: 0;
+  padding: 0;
+}
+
+.company-list-item {
+  -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          -webkit-box-flex: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 15px 45px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 5px 0px #999;
+  border-radius: 5px;
+  margin: 3vh;
+}
+
+.company-name {
+  text-align: center;
+  font-size: 1.8vw;
+  line-height: 2;
+}
+
+.vacancy-name {
+  font-size: 1.4vw;
+  margin: 1vh auto;
+}
+
+.approved:after {
+  content: "✅";
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.company-site {
+  margin: 1vh auto;
+}
+
+.company-site a[href] {
+  color: currentColor;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.company-site a[href] i {
+  color: #f2f2f2;
+}
+
+.company-site a[href]:hover {
+  border-bottom: 1px solid #b81d11;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #b81d11;
+}
+
+.company-site a[href]:hover i {
+  color: currentColor;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.vacancy-contant-list li + a:empty{
+  display: none;
+}
+
+
 /* End */

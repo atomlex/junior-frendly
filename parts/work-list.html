@@ -9,7 +9,7 @@
 
     <div class="company-list">
       <div class="company-list-item" ng-repeat="company in companies | filter:{work:true} | limitTo:totalDisplayed | filter: compSearch">
-        <a ng-href={{company.companyLink}}><h3 class="company-name approved">{{company.name}}</h3></a>
+        <h3 class="company-name approved">{{company.name}}</h3>
         <h4 class="vacancy-name">{{company.vacancyName}}</h4>
         <ol class="vacancy-requirement">
           <li ng-repeat="requirement in company.requirements">{{requirement}}</li>
@@ -18,16 +18,17 @@
         <div class="company-location">
           <span ng-repeat="location in company.location">{{location}}</span>
         </div>
-        <address class="vacancy-contacts">
-          <ul class="vacancy-contacts-list">
-            <li ng-repeat="contact in company.contacts" class="vacancy-contacts-list-item">
-              <a ng-href={{contact}}>{{contact}}</a>
-            </li>
-          </ul>
-        </address>
+        <div class="company-site">
+          <a ng-href={{company.companyLink}} ng-show="company.companyLink !== 'string'">Сайт компании <i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        <ul class="vacancy-contacts-list">
+          <li ng-repeat="contact in company.contacts" class="vacancy-contacts-list-item">
+            <a ng-href={{contact}}>{{contact}}</a>
+          </li>
+        </ul>
       </div>
     </div>
-    
+
     <button id="load" ng-hide="companies.length < totalDisplayed" ng-click="loadMore()">Показать еще</button>
   </div>
 </section>
