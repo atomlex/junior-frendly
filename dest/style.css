@@ -89,8 +89,7 @@ header {
 }
 
 .strip {
-  text-align: center;
-  font-size: 3vw
+  text-align: center
 }
 
 .strip:after {
@@ -219,10 +218,10 @@ header {
 .company-list-item {
   -ms-flex-preferred-size: 31%;
       flex-basis: 31%;
-  -webkit-flex-grow: 0;
-      -ms-flex-positive: 0;
-          -webkit-box-flex: 0;
-          flex-grow: 0;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          -webkit-box-flex: 1;
+          flex-grow: 1;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   padding: 15px 45px;
@@ -234,12 +233,10 @@ header {
 
 .company-name {
   text-align: center;
-  font-size: 1.8vw;
   line-height: 2;
 }
 
 .vacancy-name {
-  font-size: 1.4vw;
   margin: 1vh auto;
 }
 
@@ -247,6 +244,17 @@ header {
   content: "✅";
   margin-left: 10px;
   text-decoration: none;
+}
+
+.company-location {
+  margin: 2.5vh auto
+}
+
+.company-location:before {
+  content: "📍";
+  display: inline-block;
+  float: left;
+  text-indent: -20px;
 }
 
 .company-site {
@@ -278,9 +286,24 @@ header {
   transition: 0.3s;
 }
 
-.vacancy-contant-list li + a:empty{
-  display: none;
+.vacancy-requirement li {
+  margin-bottom: 1vh;
 }
 
+.vacancy-contacts-list {
+  list-style-type: none
+}
 
+.vacancy-contacts-list:before {
+  content: "Контакты:";
+  display: block;
+}
+
+.vacancy-contacts-list-item {
+}
+
+.vacancy-contacts-list-item:before {
+  content: "–";
+  text-indent: -20px;
+}
 /* End */

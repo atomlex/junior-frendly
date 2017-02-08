@@ -56,8 +56,8 @@ app.controller('CompanyListController', ['$scope', '$http', '$location', functio
       description: 'Полный рабочий день.',
       location: ['Москва'],
       contacts: {
-        email: 'mailto:yakhin.v@gmail.com',
-        tel: 'tel:+79032320810',
+        email: 'yakhin.v@gmail.com',
+        tel: '+79032320810',
         person: '',
         contactLink: '',
       },
@@ -120,7 +120,7 @@ app.controller('CompanyListController', ['$scope', '$http', '$location', functio
       description: 'Режим работы по договоренности.',
       location: ['Казань'],
       contacts: {
-        email: 'mailto:SVMochalov@kpfu.ru',
+        email: 'SVMochalov@kpfu.ru',
         tel: '',
         person: '',
         contactLink: '',
@@ -136,7 +136,7 @@ app.controller('CompanyListController', ['$scope', '$http', '$location', functio
       description: '',
       location: ['Москва', 'Санкт-Петербург', 'Воронеж'],
       contacts: {
-        email: 'mailto:job@t-systems.ru',
+        email: 'job@t-systems.ru',
         tel: '',
         person: 'Марианна Мартынова',
         contactLink: 'http://www.t-systems.ru/career/-----/1037764',
@@ -193,7 +193,7 @@ app.controller('CompanyListController', ['$scope', '$http', '$location', functio
     }
   ],
 
-  $scope.totalDisplayed = 5;
+  $scope.totalDisplayed = 4;
 
 	$scope.loadMore = function () {
 		return $scope.totalDisplayed += 4;

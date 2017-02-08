@@ -16,13 +16,13 @@
         </ol>
         <p class="vacancy-description">{{company.description}}</p>
         <div class="company-location">
-          <span ng-repeat="location in company.location">{{location}}</span>
+          <p ng-repeat="location in company.location">{{location}}</p>
         </div>
         <div class="company-site">
-          <a ng-href={{company.companyLink}}>Сайт компании <i class="fa fa-external-link" aria-hidden="true"></i></a>
+          <a ng-href={{company.companyLink}} ng-show="company.companyLink !== ''" class="ng-hide">Сайт компании <i class="fa fa-external-link" aria-hidden="true"></i></a>
         </div>
         <ul class="vacancy-contacts-list">
-          <li ng-repeat="contact in company.contacts" class="vacancy-contacts-list-item">
+          <li ng-repeat="contact in company.contacts" class="vacancy-contacts-list-item" ng-if="contact !== ''">
             <a ng-href={{contact}}>{{contact}}</a>
           </li>
         </ul>
