@@ -26,7 +26,7 @@
 
 Полный рабочий день. Офис в Москве.
 
-Писать: [yakhin.v@gmail.com](mailto:yakhin.v@gmail.com)<br>
+Писать: [atomlexx@gmail.com](mailto:atomlexx@gmail.com)<br>
 Звонить: [+79032320810](tel:+79032320810)
 
 ### <img src="logo/mel.jpg"> Мел ✅
